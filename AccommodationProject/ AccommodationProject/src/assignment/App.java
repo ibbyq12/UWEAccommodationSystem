@@ -50,7 +50,7 @@ public class App extends Application {
         // Adding more Accommodations to Mendip Hall
         hall3.addAccommodation(new Accommodation(AccommodationType.STANDARD, 100.0f, "Description"));
         hall3.addAccommodation(new Accommodation(AccommodationType.SUPERIOR, 150.0f, "Description"));
-        halls.add(hall2);
+        halls.add(hall3);
 
         // Setting Hall Manager for Brecon Hall
         HallManager manager3 = new HallManager("Manager Name", 3, "123456789");
@@ -62,8 +62,8 @@ public class App extends Application {
         halls.add(hall4);
 
         // Setting Hall Manager for Brecon Hall
-        HallManager manager4 = new HallManager("Manager Name", 3, "123456789");
-        hall2.setHallManager(manager4);
+        HallManager manager4 = new HallManager("Manager Name", 4, "123456789");
+        hall4.setHallManager(manager4);
 
         // Load FXML
         FXMLLoader loader = new FXMLLoader(getClass().getResource("gui.fxml"));
