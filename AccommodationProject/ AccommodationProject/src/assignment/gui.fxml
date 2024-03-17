@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="736.0" style="-fx-border-color: #51515C; -fx-border-width: 10; -fx-background-color: #B2B2BA; -fx-padding: 5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.GUIController">
+   <children>
+      <AnchorPane prefHeight="77.0" prefWidth="580.0">
+         <children>
+            <Label layoutX="225.0" layoutY="24.0" text="UWE Accomodation System">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="79.0" prefWidth="580.0">
+         <children>
+            <Label layoutX="19.0" layoutY="3.0" text="Hall">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="40.0" text="Hall">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="hallChoiceBox" layoutX="64.0" layoutY="38.0" prefWidth="150.0" />
+            <TextField fx:id="hallTelephoneNumber" editable="false" layoutX="298.0" layoutY="38.0" />
+            <Label layoutX="238.0" layoutY="40.0" text="Tel No.">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="468.0" layoutY="40.0" text="Manager">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="managerName" editable="false" layoutX="542.0" layoutY="38.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="84.0" prefWidth="701.0">
+         <children>
+            <Label layoutX="20.0" layoutY="3.0" text="Accommodation">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="42.0" text="Total">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="totalRoomsField" editable="false" layoutX="82.0" layoutY="40.0" prefHeight="25.0" prefWidth="47.0" />
+            <Label layoutX="161.0" layoutY="42.0" text="Available">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="availableRoomsField" editable="false" layoutX="246.0" layoutY="40.0" prefHeight="25.0" prefWidth="47.0" />
+            <Label layoutX="320.0" layoutY="42.0" text="Offline">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="offlineRoomsField" editable="false" layoutX="385.0" layoutY="40.0" prefHeight="25.0" prefWidth="47.0" />
+            <Label layoutX="464.0" layoutY="42.0" text="Require Cleaning">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="requireCleaningRoomsField" editable="false" layoutX="601.0" layoutY="40.0" prefHeight="25.0" prefWidth="47.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="106.0" prefWidth="701.0">
+         <children>
+            <TableView fx:id="accommodationTableView" layoutX="19.0" prefHeight="157.0" prefWidth="667.0">
+              <columns>
+                <TableColumn fx:id="accommNoColumn" prefWidth="118.0" text="Accomm Number" />
+                <TableColumn fx:id="accommTypeColumn" prefWidth="114.0" text="Accomm Type" />
+                  <TableColumn fx:id="priceColumn" prefWidth="122.0" text="Rental Price" />
+                  <TableColumn fx:id="availabilityColumn" prefWidth="121.0" text="Availability" />
+                  <TableColumn fx:id="cleaningStatusColumn" prefWidth="225.0" text="Cleaning Status" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="143.0">
+         <children>
+            <AnchorPane layoutX="-6.0" prefHeight="284.0" prefWidth="357.0">
+               <children>
+                  <Label layoutX="54.0" layoutY="20.0" text="Accommodation Information">
+                     <font>
+                        <Font name="Arial Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="59.0" text="Accomm Number">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="accommNumberInfo" editable="false" layoutX="179.0" layoutY="57.0" />
+                  <Label layoutX="31.0" layoutY="102.0" text="Type">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="accommTypeInfo" editable="false" layoutX="179.0" layoutY="100.0" />
+                  <Label layoutX="31.0" layoutY="142.0" text="Price">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="accommPriceInfo" editable="false" layoutX="179.0" layoutY="140.0" />
+                  <Label layoutX="31.0" layoutY="181.0" text="Occupancy">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="accommOccupancyInfo" editable="false" layoutX="179.0" layoutY="179.0" />
+                  <Label layoutX="108.0" layoutY="224.0" text="Cleaning Status">
+                     <font>
+                        <Font name="Arial Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="260.0" text="Cleaning Status">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="cleaningStatusChoice" layoutX="179.0" layoutY="258.0" prefWidth="150.0" />
+                  <Separator layoutX="352.0" layoutY="2.0" orientation="VERTICAL" prefHeight="281.0" prefWidth="11.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="355.0" layoutY="5.0" prefHeight="275.0" prefWidth="353.0">
+               <children>
+                  <Label layoutX="95.0" layoutY="14.0" prefHeight="23.0" prefWidth="167.0" text="Rental Agreement">
+                     <font>
+                        <Font name="Arial Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="52.0" text="Lease Number">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="leaseNumber" editable="false" layoutX="179.0" layoutY="50.0"/>
+                  <Label layoutX="14.0" layoutY="96.0" text="First Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="firstName" editable="true" layoutX="179.0" layoutY="94.0"/>
+                  <Label layoutX="14.0" layoutY="138.0" text="Last Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lastName" editable="true" layoutX="179.0" layoutY="136.0"/>
+                  <Label layoutX="14.0" layoutY="178.0" text="Student Number">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="studentNumber" editable="true" layoutX="179.0" layoutY="176.0"/>
+                  <Label layoutX="14.0" layoutY="217.0" text="Mobile">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mobileNumber" editable="true" layoutX="179.0" layoutY="215.0"/>
+                  <Button fx:id="createRentalAgreement" layoutX="22.0" layoutY="249.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Create" onAction="#createRentalAgreement"/>
+                  <Button fx:id="deleteRentalAgreement" layoutX="225.0" layoutY="249.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Delete" onAction="#deleteRentalAgreement"/>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="43.0" prefWidth="706.0">
+         <children>
+            <TextField fx:id="accommDescription" editable="false" layoutX="40.0" layoutY="9.0" prefHeight="21.0" prefWidth="630.0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
